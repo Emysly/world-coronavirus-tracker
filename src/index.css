@@ -152,6 +152,13 @@ span.new-deaths {
   }
   body .input-box {
     margin: 5px;
-    font-size: 14px;
+    font-size: 18px;
+  }
+  body .btn {
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 10px;
+    background-color: #0000009f;
   }
 }
