@@ -150,7 +150,8 @@ span.new-deaths {
     line-height: 40px;
     position: relative;
   }
-  body .table {
-    width: 100%;
+  body .input-box {
+    margin: 5px;
+    font-size: 14px;
   }
 }
