@@ -5,7 +5,7 @@ function Card({ items }) {
     <div className="card-list">
       <div className="card total">
         <div className="title">
-          <h2>GLOBAL CORONAVIRUS INFECTIONS</h2>
+          <h3>GLOBAL CORONAVIRUS INFECTIONS</h3>
           <span className="total">
             <i className="fas fa-stethoscope"></i>
           </span>
@@ -21,7 +21,7 @@ function Card({ items }) {
       </div>
       <div className="card deaths">
         <div className="title">
-          <h2>TOTAL DEATHS</h2>
+          <h3>TOTAL DEATHS</h3>
           <span className="deaths">
             <i className="fas fa-skull-crossbones"></i>
           </span>
@@ -34,7 +34,7 @@ function Card({ items }) {
       </div>
       <div className="card active">
         <div className="title">
-          <h2>CURRENTLY INFECTED</h2>
+          <h3>CURRENTLY INFECTED</h3>
           <span className="active">
             <i className="fas fa-first-aid"></i>
           </span>
@@ -44,7 +44,7 @@ function Card({ items }) {
       </div>
       <div className="card recovered">
         <div className="title">
-          <h2>TOTAL RECOVERED</h2>
+          <h3>TOTAL RECOVERED</h3>
           <span className="recovered">
             <i className="far fa-heart"></i>
           </span>

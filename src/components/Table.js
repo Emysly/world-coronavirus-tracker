@@ -1,7 +1,7 @@
 import React from "react";
 
 const Table = (props) => (
-  <table className="table table-striped table-dark">
+  <table className="table table-striped table-dark table-responsive">
     <thead className="thead-dark">
       <tr>
         <th>Location</th>
