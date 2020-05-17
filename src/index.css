@@ -9,14 +9,19 @@ body {
 }
 
 .App-header {
-  background-color: #0000009f;
-  display: flex;
-  justify-content: center;
+  background-color: #00000000;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  padding: 10px;
+  position: fixed;
 }
 
 .App-header h1 {
   font-size: 30px;
-  color: #f3f4f6;
+  display: block;
+  text-align: center;
+  color: #ffffff;
 }
 
 .searchbox-wrap {
@@ -61,6 +66,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 70px;
 }
 
 .card {

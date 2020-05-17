@@ -10,6 +10,7 @@ class App extends React.Component {
 
     this.state = {
       input: "",
+      table: [],
       results: [],
     };
   }
@@ -24,12 +25,9 @@ class App extends React.Component {
     })
       .then((response) => {
         response.json().then((data) => {
-          this.setState(
-            {
-              results: data,
-            },
-            () => console.log(this.state.results)
-          );
+          this.setState({
+            results: data,
+          });
         });
       })
       .catch((err) => {
@@ -39,30 +37,19 @@ class App extends React.Component {
 
   onSearchSubmit = (e) => {
     let target = e.target.children[0].value;
-    let dataArray = [];
-    fetch("https://covid-19-tracking.p.rapidapi.com/v1", {
+    fetch(`https://covid-193.p.rapidapi.com/statistics?country=${target}`, {
       method: "GET",
       headers: {
-        "x-rapidapi-host": "covid-19-tracking.p.rapidapi.com",
+        "x-rapidapi-host": "covid-193.p.rapidapi.com",
         "x-rapidapi-key": "b2bc1624b5msh3ad52de49143c83p1e916ajsnd74cb699465d",
       },
     })
       .then((response) => {
         response.json().then((data) => {
-          this.setState(
-            {
-              input: target,
-              results: data.filter((result) => {
-                if (result["Country_text"]) {
-                  result["Country_text"]
-                    .toString()
-                    .toLowerCase()
-                    .includes(target.toLowerCase());
-                }
-              }),
-            },
-            () => console.log(this.state.results)
-          );
+          this.setState({
+            input: target,
+            table: data.response,
+          });
         });
       })
       .catch((err) => {
@@ -80,7 +67,7 @@ class App extends React.Component {
         <main className="main">
           <CardContainer />
           <Search onSearch={this.onSearchSubmit} />
-          <Table results={this.state.results} />
+          <Table results={this.state.table} />
         </main>
       </div>
     );

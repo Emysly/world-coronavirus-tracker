@@ -16,37 +16,21 @@ const Table = (props) => (
       {props.results.map((result, index) => {
         return (
           <tr key={index}>
-            <td>{result["Country_text"]}</td>
+            <td>{result.country}</td>
 
-            {result["Total Cases_text"] ? (
-              <td>{result["Total Cases_text"]}</td>
+            {result.cases.total ? <td>{result.cases.total}</td> : <td></td>}
+
+            {result.cases.recovered ? (
+              <td>{result.cases.recovered}</td>
             ) : (
               <td></td>
             )}
 
-            {result["Total Recovered_text"] ? (
-              <td>{result["Total Recovered_text"]}</td>
-            ) : (
-              <td></td>
-            )}
+            {result.deaths.total ? <td>{result.deaths.total}</td> : <td></td>}
 
-            {result["Total Recovered_text"] ? (
-              <td>{result["Total Recovered_text"]}</td>
-            ) : (
-              <td></td>
-            )}
+            {result.cases.new ? <td>{result.cases.new}</td> : <td></td>}
 
-            {result["New Cases_text"] ? (
-              <td>{result["New Cases_text"]}</td>
-            ) : (
-              <td></td>
-            )}
-
-            {result["Active Cases_text"] ? (
-              <td>{result["Active Cases_text"]}</td>
-            ) : (
-              <td></td>
-            )}
+            {result.cases.active ? <td>{result.cases.active}</td> : <td></td>}
           </tr>
         );
       })}

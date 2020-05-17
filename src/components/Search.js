@@ -6,7 +6,7 @@ function Search({ onSearch }) {
       <input
         type="text"
         className="input-box"
-        placeholder="search for country..."
+        placeholder="search a country..."
       />
       <button className="btn">Search</button>
     </form>

@@ -21,12 +21,9 @@ class CardContainer extends Component {
     })
       .then((response) => {
         response.json().then((data) => {
-          this.setState(
-            {
-              results: data[0],
-            },
-            () => console.log(this.state.results)
-          );
+          this.setState({
+            results: data[0],
+          });
         });
       })
       .catch((err) => {
