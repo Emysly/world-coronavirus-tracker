@@ -63,11 +63,11 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>CORONA VIRUS TRACKER</h1>
-          <h4 style={{ color: "red", textAlign: "center" }}>
-            This statistics is not 100% accurate!!!
-          </h4>
         </header>
         <main className="main">
+          <p style={{ color: "red", textAlign: "center" }}>
+            This statistics is not 100% accurate!!!
+          </p>
           <Search onSearch={this.onSearchSubmit} />
           <Table results={this.state.table} />
           <CardContainer />

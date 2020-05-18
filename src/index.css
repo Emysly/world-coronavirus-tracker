@@ -25,11 +25,14 @@ body {
   font-weight: 700;
 }
 
+.main {
+  margin-top: 150px;
+}
+
 .searchbox-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
 }
 
 .input-box {
