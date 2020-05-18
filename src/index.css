@@ -25,10 +25,13 @@ body {
   font-weight: 700;
 }
 
-.main {
-  margin-top: 150px;
+.main p {
+  margin-top: 50px;
 }
 
+.main {
+  padding: 50px;
+}
 .searchbox-wrap {
   display: flex;
   justify-content: center;
@@ -52,10 +55,6 @@ body {
   width: 100px;
   height: 40px;
   background-color: #0000009f;
-}
-
-.main {
-  padding: 20px;
 }
 
 .table-wrap {
