@@ -21,7 +21,7 @@ function Card({ items }) {
       </div>
       <div className="card deaths">
         <div className="title">
-          <h3>TOTAL DEATHS</h3>
+          <h3>GLOBAL CORONAVIRUS DEATHS</h3>
           <span className="deaths">
             <i className="fas fa-skull-crossbones"></i>
           </span>
@@ -30,7 +30,7 @@ function Card({ items }) {
           {items["Total Deaths_text"]}
           <span className="new-deaths">{items["New Deaths_text"]}</span>
         </h1>
-        <p>The total amount of infected people that died</p>
+        <p>The total amount of infected people that died globally</p>
       </div>
       <div className="card active">
         <div className="title">

@@ -29,6 +29,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 
 .input-box {
@@ -54,8 +55,14 @@ body {
   padding: 20px;
 }
 
+.table-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .table {
   margin-top: 20px;
+  width: 500px;
 }
 
 .title {
@@ -73,7 +80,7 @@ body {
 .card {
   flex: 0 0 calc(50% - 15px);
   max-width: calc(50% - 15px);
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 30px;
   line-height: 40px;
   position: relative;
@@ -97,32 +104,36 @@ body {
 }
 
 .card.active::before {
-  background-color: #ff0;
+  background-color: rgb(211, 211, 5);
 }
 
 .card.recovered::before {
   background-color: #0f0;
 }
 
+.card .title h3 {
+  word-wrap: break-word;
+}
+
 span.total {
   color: #00f;
-  padding-right: 10px;
+  padding: 0 10px;
   font-size: 30px;
 }
 
 span.deaths {
   color: #f00;
-  padding-right: 10px;
+  padding: 0 10px;
   font-size: 30px;
 }
 span.active {
-  color: #ff0;
-  padding-right: 10px;
+  color: rgb(211, 211, 5);
+  padding: 0 10px;
   font-size: 30px;
 }
 span.recovered {
   color: #0f0;
-  padding-right: 10px;
+  padding: 0 10px;
   font-size: 30px;
 }
 
@@ -138,17 +149,13 @@ span.new-deaths {
   padding-left: 5px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   body .card-list {
     flex-direction: column;
   }
   body .card {
     flex: 0 0 100%;
     max-width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-    line-height: 40px;
-    position: relative;
   }
   body .input-box {
     margin: 5px;

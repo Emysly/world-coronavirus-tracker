@@ -3,7 +3,6 @@ import React from "react";
 import CardContainer from "./components/CardContainer";
 import Table from "./components/Table";
 import Search from "./components/Search";
-import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -64,15 +63,15 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>CORONA VIRUS TRACKER</h1>
+          <h4 style={{ color: "red", textAlign: "center" }}>
+            This statistics is not 100% accurate!!!
+          </h4>
         </header>
         <main className="main">
-          <CardContainer />
           <Search onSearch={this.onSearchSubmit} />
           <Table results={this.state.table} />
+          <CardContainer />
         </main>
-        <footer>
-          <Footer results={this.state.results} />
-        </footer>
       </div>
     );
   }
