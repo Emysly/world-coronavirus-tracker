@@ -3,6 +3,7 @@ import React from "react";
 import CardContainer from "./components/CardContainer";
 import Table from "./components/Table";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   constructor(props) {
@@ -69,6 +70,9 @@ class App extends React.Component {
           <Search onSearch={this.onSearchSubmit} />
           <Table results={this.state.table} />
         </main>
+        <footer>
+          <Footer results={this.state.results} />
+        </footer>
       </div>
     );
   }
